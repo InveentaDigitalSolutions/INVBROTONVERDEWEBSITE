@@ -102,7 +102,7 @@ figure{margin:0}
 .nav.is-hidden{transform:translateY(-110%)}
 html[data-theme="dark"] .nav.is-light{--ink:#151F2D;--ink-2:#3E4A55;--mute:#7B8590;--line:rgba(21,31,45,.10);--line-2:rgba(21,31,45,.18);--glass:rgba(255,255,255,.55);--glass-line:rgba(255,255,255,.75);--brand-a:#151F2D;--lime-ink:#7F9228}
 html[data-theme="dark"] .nav.is-light .btn--primary{background:#2F6B3C;color:#fff}
-.nav__brand{position:relative;z-index:1;font-family:var(--sans);font-weight:700;font-size:20px;letter-spacing:-.03em;white-space:nowrap;color:var(--brand-a)}
+.nav__brand{position:relative;z-index:1;font-family:var(--sans);font-weight:700;font-size:26px;letter-spacing:-.035em;white-space:nowrap;color:var(--brand-a)}
 .nav__brand em{font-style:normal;color:var(--brand-b)}
 .nav__links{position:relative;z-index:1;display:flex;gap:2px}
 .nav__links a{padding:8px 14px;border-radius:999px;font-size:14px;font-weight:400;color:var(--ink-2);transition:color .3s,background .3s}
@@ -337,7 +337,7 @@ html[data-theme="dark"] .hero::before{background:linear-gradient(to bottom,var(-
 .sheet__head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
 .sheet__head .mono{color:var(--mute)}
 .sheet__head b{display:block;font-family:var(--serif);font-weight:400;font-size:20px;letter-spacing:-.01em}
-.sheet__brand{font-family:var(--sans);font-weight:700;letter-spacing:-.03em;font-size:15px;color:var(--brand-a)}
+.sheet__brand{font-family:var(--sans);font-weight:700;letter-spacing:-.03em;font-size:17px;color:var(--brand-a)}
 .sheet__brand em{font-style:normal;color:var(--brand-b)}
 .sheet table{width:100%;border-collapse:collapse;font-size:13.5px}
 .sheet th{text-align:left;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);padding:8px;border-bottom:1px solid var(--line-2);font-weight:500}
@@ -486,3 +486,47 @@ html[data-theme="dark"] .hero::before{background:linear-gradient(to bottom,var(-
 .grade-chip{display:inline-flex;align-items:center;gap:10px;padding:10px 16px 10px 12px;border-radius:999px;background:var(--bg-2);border:1px solid var(--line);font-family:var(--serif);font-size:18px;letter-spacing:-.01em;box-shadow:var(--shadow)}
 .grade-chip i{font-style:normal;color:var(--green-2)}
 .card__media--photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* ── Mobile optimisation ─────────────────────────────────── */
+@media (max-width:900px){
+  .nav__brand{font-size:23px}
+  .hero{padding-top:104px}
+  .hero__bg{display:none}                       /* no full-screen blur filter on phones */
+  .hero::before{background:var(--bg)}
+  .glass,.card,.flight,.form,.sheet__card,.nav::before{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--glass-2)}
+  .hero__card{padding:12px 14px}
+  .hero__card b{font-size:14px}
+  .hero__card--a{left:12px;right:12px;bottom:12px}
+  .hero__card--b{display:none}
+  .hero__sub{font-size:16px}
+  .featured{padding:18px 14px 20px}
+  .featured__head h3{font-size:34px}
+  .featured__grid{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:4px 2px 14px;margin:0 -2px}
+  .pcard{flex:none;width:min(76vw,300px);scroll-snap-align:start}
+  .grow__inner{padding-bottom:18px}
+  .sheet{padding:20px 0 30px}
+  .sheet__card{transform:none;padding:16px}
+  .sheet table{font-size:12.5px}
+  .sheet td,.sheet th{padding:8px 6px}
+  .sheet td:nth-child(2),.sheet th:nth-child(2){display:none}
+  .sheet__chip{padding:9px 12px}
+  .sheet__chip--a{top:-12px;right:6px}
+  .sheet__chip--b{left:6px;bottom:8px}
+  .growth__title{font-size:26px;padding:0 var(--gutter)}
+  .place__reveal{min-height:90svh}
+  .finale{padding:80px 0}
+  .footer__big{font-size:clamp(48px,17vw,84px)}
+}
+@media (max-width:560px){
+  .eyebrow{font-size:10px}
+  .hero__stats{gap:16px 12px}
+  .stat b{font-size:24px}
+  .stat__sub{font-size:13px}
+  .section__head{margin-bottom:28px}
+  .card__body{padding:22px 20px 26px}
+  .specs{grid-template-columns:1fr 1fr;gap:12px 16px}
+  .grades-row{gap:8px}
+  .grade-chip{font-size:16px;padding:8px 12px 8px 10px}
+  .step__text h3{font-size:26px}
+  .form{padding:20px 16px}
+}
