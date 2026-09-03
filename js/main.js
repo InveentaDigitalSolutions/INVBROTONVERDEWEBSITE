@@ -61,10 +61,7 @@
   $$('[data-depth]', stage).forEach(layer => gsap.to(layer, { y: () => parseFloat(layer.dataset.depth) * -140, ease: 'none',
     scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: true, invalidateOnRefresh: true } }));
   gsap.to('.hero__bg', { y: 120, ease: 'none', scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: true } });
-  if (matchMedia('(pointer:fine)').matches) {
-    const movers = $$('.hero__card', stage).map((el, i) => ({ f: 10 + i * 8, x: gsap.quickTo(el, 'x', { duration: 1.2, ease: 'power3' }), y: gsap.quickTo(el, 'y', { duration: 1.2, ease: 'power3' }) }));
-    hero.addEventListener('pointermove', e => { const nx = e.clientX / innerWidth - 0.5, ny = e.clientY / innerHeight - 0.5; movers.forEach(m => { m.x(nx * m.f); m.y(ny * m.f); }); });
-  }
+  // Glass cards stay static: transforming a backdrop-filtered element every frame flickers.
 
   /* ── Generic reveals ─────────────────────────────────────── */
   $$('.reveal-up').forEach(el => { if (hero.contains(el)) return; gsap.to(el, { autoAlpha: 1, y: 0, duration: 1.1, scrollTrigger: { trigger: el, start: 'top 88%', once: true } }); });
