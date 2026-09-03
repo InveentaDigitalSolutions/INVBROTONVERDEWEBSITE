@@ -33,6 +33,13 @@ reduced motion.
 - Signature element: the **day arc** at the top — a sun travels an arc as you scroll, with a dot
   per section (`[data-arc]`).
 
+## Content rules (from the nursery)
+
+- Location: country only ("Honduras"). No town, altitude, airport, bed or shadehouse names.
+- Customer-facing copy: consistency of grades, availability, clean material, unrooted or rooted.
+  No process talk (cut-off days, flights) beyond the logistics section.
+- Animations are one-shot reveals; nothing is scrubbed to scroll position.
+
 ## Catalogue data
 
 `data/catalog.json` is parsed from the 2026–27 foliage catalogue PDF (93 lines, 20 genera:

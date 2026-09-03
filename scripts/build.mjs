@@ -25,7 +25,7 @@ const mediaHtml = (v, cls) => {
 };
 
 /* Featured Pothos */
-const pothos = lines.filter(v => v.group === 'pothos').sort((a, b) => (lineImg(b) ? 1 : 0) - (lineImg(a) ? 1 : 0));
+const pothos = lines.filter(v => v.group === 'pothos' && lineImg(v)); // featured: only lines with a photograph; the group list below carries all 13
 const pothosHtml = pothos.map(v => `
         <article class="pcard${lineImg(v) ? '' : ' pcard--pending'}">
           <div class="pcard__media">
