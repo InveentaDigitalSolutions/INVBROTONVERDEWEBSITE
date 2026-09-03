@@ -1,0 +1,557 @@
+{
+ "groups": [
+  {
+   "key": "pothos",
+   "title": "Pothos",
+   "latin": "Epipremnum aureum",
+   "order": 1,
+   "note": "The volume programme. Leaf-and-eye cuttings from stock beds pruned on rotation; the fastest lines to root are Jade and Hawaiian.",
+   "app": "Pothos"
+  },
+  {
+   "key": "sansevieria",
+   "title": "Sansevieria",
+   "latin": "Sansevieria trifasciata",
+   "order": 2,
+   "note": "Thirteen lines, from the compact Hahnii rosettes to Laurentii and Zeylanica. Slow, tough and shipped by count.",
+   "app": "Mother Tonge"
+  },
+  {
+   "key": "satin-pothos",
+   "title": "Satin Pothos",
+   "latin": "Scindapsus pictus",
+   "order": 3,
+   "note": "Soft, silver-splashed heart leaves. Slower than Pothos and worth the wait.",
+   "app": "Satin Pothos"
+  },
+  {
+   "key": "philodendron",
+   "title": "Heartleaf Philodendron",
+   "latin": "Philodendron hederaceum",
+   "order": 4,
+   "note": "As easy as Pothos, cut leaf-and-eye. Brasil for the stripe, Neon for the colour.",
+   "app": "Heartleaf Philo"
+  },
+  {
+   "key": "dieffenbachia",
+   "title": "Dieffenbachia",
+   "latin": "Dieffenbachia seguine",
+   "order": 5,
+   "note": "Broad, patterned leaves on an upright plant. Tip cuttings.",
+   "app": "Money Plant"
+  }
+ ],
+ "lines": [
+  {
+   "group": "pothos",
+   "groupTitle": "Pothos",
+   "latin": "Epipremnum aureum",
+   "variety": "Golden Glen",
+   "appName": "Pothos",
+   "appVariety": "Golden Glen",
+   "slug": "pothos-golden-glen",
+   "images": {},
+   "spec": null
+  },
+  {
+   "group": "pothos",
+   "groupTitle": "Pothos",
+   "latin": "Epipremnum aureum",
+   "variety": "Green Isle",
+   "appName": "Pothos",
+   "appVariety": "Green Isle",
+   "slug": "pothos-green-isle",
+   "images": {},
+   "spec": null
+  },
+  {
+   "group": "pothos",
+   "groupTitle": "Pothos",
+   "latin": "Epipremnum aureum",
+   "variety": "Hawaiian",
+   "appName": "Pothos",
+   "appVariety": "Hawaiian",
+   "slug": "pothos-hawaiian",
+   "images": {
+    "leaf": "pothos-epipremnum-aureum-hawaiian-leaf.webp",
+    "pot": "pothos-epipremnum-aureum-hawaiian-pot.webp",
+    "grid": "pothos-epipremnum-aureum-hawaiian-grid.webp"
+   },
+   "spec": {
+    "product": "L&E",
+    "size_in": "5\u2033-6\u2033",
+    "size_cm": "13-15 cm",
+    "units": "2200",
+    "light": [
+     "Bright Indirect Sunlight",
+     "Low-Medium light",
+     "Shade",
+     "Partial Shade"
+    ],
+    "bullets": [
+     "Variegated foliage",
+     "Air purifier \u2013 removes formaldehyde, benzene, and carbon monoxide"
+    ]
+   }
+  },
+  {
+   "group": "pothos",
+   "groupTitle": "Pothos",
+   "latin": "Epipremnum aureum",
+   "variety": "Icy",
+   "appName": "Pothos",
+   "appVariety": "Icy",
+   "slug": "pothos-icy",
+   "images": {},
+   "spec": null
+  },
+  {
+   "group": "pothos",
+   "groupTitle": "Pothos",
+   "latin": "Epipremnum aureum",
+   "variety": "Icy Mammoth",
+   "appName": "Pothos",
+   "appVariety": "Icy Mammoth",
+   "slug": "pothos-icy-mammoth",
+   "images": {},
+   "spec": null
+  },
+  {
+   "group": "pothos",
+   "groupTitle": "Pothos",
+   "latin": "Epipremnum aureum",
+   "variety": "Jade",
+   "appName": "Pothos",
+   "appVariety": "Jade",
+   "slug": "pothos-jade",
+   "images": {
+    "pot": "pothos-epipremnum-aureum-jade-pot.webp",
+    "grid": "pothos-epipremnum-aureum-jade-grid.webp"
+   },
+   "spec": {
+    "product": "L&E",
+    "size_in": "6\u2033",
+    "size_cm": "15-16 cm",
+    "units": "2500",
+    "light": [
+     "Bright Indirect Sunlight",
+     "Low-Medium light",
+     "Shade",
+     "Partial Shade"
+    ],
+    "bullets": [
+     "Bright foliage",
+     "Durable"
+    ]
+   }
+  },
+  {
+   "group": "pothos",
+   "groupTitle": "Pothos",
+   "latin": "Epipremnum aureum",
+   "variety": "Marble Princess",
+   "appName": "Pothos",
+   "appVariety": "Marble Princess",
+   "slug": "pothos-marble-princess",
+   "images": {},
+   "spec": null
+  },
+  {
+   "group": "pothos",
+   "groupTitle": "Pothos",
+   "latin": "Epipremnum aureum",
+   "variety": "Marble Queen",
+   "appName": "Pothos",
+   "appVariety": "Marble Queen",
+   "slug": "pothos-marble-queen",
+   "images": {
+    "pot": "pothos-epipremnum-aureum-marble-queen-pot.webp",
+    "grid": "pothos-epipremnum-aureum-marble-queen-grid.webp"
+   },
+   "spec": {
+    "product": "L&E",
+    "size_in": "6\u2033",
+    "size_cm": "15-16 cm",
+    "units": "2000",
+    "light": [
+     "Bright Indirect Sunlight",
+     "Low-Medium light",
+     "Shade",
+     "Partial Shade"
+    ],
+    "bullets": [
+     "Variegated foliage",
+     "Air purifier\u2013removes formaldehyde, benzene, and carbon monoxide"
+    ]
+   }
+  },
+  {
+   "group": "pothos",
+   "groupTitle": "Pothos",
+   "latin": "Epipremnum aureum",
+   "variety": "N'Joy",
+   "appName": "Pothos",
+   "appVariety": "N'Joy",
+   "slug": "pothos-n-joy",
+   "images": {
+    "photo": "pothos-n-joy-photo.webp"
+   },
+   "spec": null
+  },
+  {
+   "group": "pothos",
+   "groupTitle": "Pothos",
+   "latin": "Epipremnum aureum",
+   "variety": "Neon",
+   "appName": "Pothos",
+   "appVariety": "Neon",
+   "slug": "pothos-neon",
+   "images": {
+    "leaf": "pothos-epipremnum-aureum-neon-leaf.webp",
+    "pot": "pothos-epipremnum-aureum-neon-pot.webp",
+    "grid": "pothos-epipremnum-aureum-neon-grid.webp"
+   },
+   "spec": {
+    "product": "L&E",
+    "size_in": "6\u2033-7\u2033",
+    "size_cm": "15-17 cm",
+    "units": "2000",
+    "light": [
+     "Bright Indirect Sunlight",
+     "Low-Medium light",
+     "Shade",
+     "Partial Shade"
+    ],
+    "bullets": [
+     "Golden green-yellow leaves with no variegation",
+     "Quite tolerant to drought"
+    ]
+   }
+  },
+  {
+   "group": "pothos",
+   "groupTitle": "Pothos",
+   "latin": "Epipremnum aureum",
+   "variety": "Sea Storm",
+   "appName": "Pothos",
+   "appVariety": "Sea Storm",
+   "slug": "pothos-sea-storm",
+   "images": {},
+   "spec": null
+  },
+  {
+   "group": "pothos",
+   "groupTitle": "Pothos",
+   "latin": "Epipremnum aureum",
+   "variety": "Snow Queen",
+   "appName": "Pothos",
+   "appVariety": "Snow Queen",
+   "slug": "pothos-snow-queen",
+   "images": {
+    "pot": "pothos-epipremnum-aureum-snow-queen-pot.webp",
+    "grid": "pothos-epipremnum-aureum-snow-queen-grid.webp"
+   },
+   "spec": {
+    "product": "L&E",
+    "size_in": "5\u2033-7\u2033",
+    "size_cm": "13-18 cm",
+    "units": "2500",
+    "light": [
+     "Low-Medium light",
+     "Shade",
+     "Partial Shade"
+    ],
+    "bullets": [
+     "Similar to the well-known \u2018Marble Queen\u2019 but with more white variegation",
+     "Habit: Trailing"
+    ]
+   }
+  },
+  {
+   "group": "pothos",
+   "groupTitle": "Pothos",
+   "latin": "Epipremnum aureum",
+   "variety": "Snowy Stream",
+   "appName": "Pothos",
+   "appVariety": "Snowy Stream",
+   "slug": "pothos-snowy-stream",
+   "images": {},
+   "spec": null
+  },
+  {
+   "group": "sansevieria",
+   "groupTitle": "Sansevieria",
+   "latin": "Sansevieria trifasciata",
+   "variety": "Black Hahnii",
+   "appName": "Mother Tonge",
+   "appVariety": "Black Hahanii",
+   "slug": "sansevieria-black-hahnii",
+   "images": {},
+   "spec": null
+  },
+  {
+   "group": "sansevieria",
+   "groupTitle": "Sansevieria",
+   "latin": "Sansevieria trifasciata",
+   "variety": "Gold Flame",
+   "appName": "Mother Tonge",
+   "appVariety": "Gold Flame",
+   "slug": "sansevieria-gold-flame",
+   "images": {},
+   "spec": null
+  },
+  {
+   "group": "sansevieria",
+   "groupTitle": "Sansevieria",
+   "latin": "Sansevieria trifasciata",
+   "variety": "Gold Hahnii",
+   "appName": "Mother Tonge",
+   "appVariety": "Gold Hahanii",
+   "slug": "sansevieria-gold-hahnii",
+   "images": {
+    "photo": "sansevieria-gold-hahnii-photo.webp"
+   },
+   "spec": null
+  },
+  {
+   "group": "sansevieria",
+   "groupTitle": "Sansevieria",
+   "latin": "Sansevieria trifasciata",
+   "variety": "Golden Hahnii",
+   "appName": "Mother Tonge",
+   "appVariety": "Golden Hahanii",
+   "slug": "sansevieria-golden-hahnii",
+   "images": {
+    "photo": "sansevieria-golden-hahnii-photo.webp"
+   },
+   "spec": null
+  },
+  {
+   "group": "sansevieria",
+   "groupTitle": "Sansevieria",
+   "latin": "Sansevieria trifasciata",
+   "variety": "Green Hahnii",
+   "appName": "Mother Tonge",
+   "appVariety": "Green Hahanii",
+   "slug": "sansevieria-green-hahnii",
+   "images": {
+    "photo": "sansevieria-green-hahnii-photo.webp"
+   },
+   "spec": null
+  },
+  {
+   "group": "sansevieria",
+   "groupTitle": "Sansevieria",
+   "latin": "Sansevieria trifasciata",
+   "variety": "Hawaiian Hahnii",
+   "appName": "Mother Tonge",
+   "appVariety": "Hawaiian Hahanii",
+   "slug": "sansevieria-hawaiian-hahnii",
+   "images": {},
+   "spec": null
+  },
+  {
+   "group": "sansevieria",
+   "groupTitle": "Sansevieria",
+   "latin": "Sansevieria trifasciata",
+   "variety": "Laurentii",
+   "appName": "Mother Tonge",
+   "appVariety": "Laurentii",
+   "slug": "sansevieria-laurentii",
+   "images": {
+    "photo": "sansevieria-laurentii-photo.webp"
+   },
+   "spec": null
+  },
+  {
+   "group": "sansevieria",
+   "groupTitle": "Sansevieria",
+   "latin": "Sansevieria trifasciata",
+   "variety": "Lotus Hahnii",
+   "appName": "Mother Tonge",
+   "appVariety": "Lotus Hahanii",
+   "slug": "sansevieria-lotus-hahnii",
+   "images": {},
+   "spec": null
+  },
+  {
+   "group": "sansevieria",
+   "groupTitle": "Sansevieria",
+   "latin": "Sansevieria trifasciata",
+   "variety": "Snake Wale Red",
+   "appName": "Mother Tonge",
+   "appVariety": "Snake Wale Red",
+   "slug": "sansevieria-snake-wale-red",
+   "images": {},
+   "spec": null
+  },
+  {
+   "group": "sansevieria",
+   "groupTitle": "Sansevieria",
+   "latin": "Sansevieria trifasciata",
+   "variety": "Snake Wale Yellow",
+   "appName": "Mother Tonge",
+   "appVariety": "Snake Wale Yllw",
+   "slug": "sansevieria-snake-wale-yellow",
+   "images": {},
+   "spec": null
+  },
+  {
+   "group": "sansevieria",
+   "groupTitle": "Sansevieria",
+   "latin": "Sansevieria trifasciata",
+   "variety": "Superba",
+   "appName": "Mother Tonge",
+   "appVariety": "Superba",
+   "slug": "sansevieria-superba",
+   "images": {},
+   "spec": null
+  },
+  {
+   "group": "sansevieria",
+   "groupTitle": "Sansevieria",
+   "latin": "Sansevieria trifasciata",
+   "variety": "Whitney Hahnii",
+   "appName": "Mother Tonge",
+   "appVariety": "Whitney Hahanii",
+   "slug": "sansevieria-whitney-hahnii",
+   "images": {},
+   "spec": null
+  },
+  {
+   "group": "sansevieria",
+   "groupTitle": "Sansevieria",
+   "latin": "Sansevieria trifasciata",
+   "variety": "Zeylanica",
+   "appName": "Mother Tonge",
+   "appVariety": "Zeylanica",
+   "slug": "sansevieria-zeylanica",
+   "images": {
+    "photo": "sansevieria-zeylanica-photo.webp"
+   },
+   "spec": null
+  },
+  {
+   "group": "satin-pothos",
+   "groupTitle": "Satin Pothos",
+   "latin": "Scindapsus pictus",
+   "variety": "Exotica",
+   "appName": "Satin Pothos",
+   "appVariety": "Exotica",
+   "slug": "satin-pothos-exotica",
+   "images": {
+    "pot": "scindapsus-pictus-exotica-pot.webp",
+    "grid": "scindapsus-pictus-exotica-grid.webp"
+   },
+   "spec": {
+    "product": "L&E",
+    "size_in": "4\u2033-5\u2033",
+    "size_cm": "11-12 cm",
+    "units": "2500",
+    "light": [
+     "Bright Indirect Sunlight",
+     "Low-Medium light",
+     "Shade",
+     "Partial Shade"
+    ],
+    "bullets": [
+     "Large heart-shaped leaves with silver variegation",
+     "Similar to Scindapsus pictus Silver Satin, but with larger and thicker leaves"
+    ]
+   }
+  },
+  {
+   "group": "satin-pothos",
+   "groupTitle": "Satin Pothos",
+   "latin": "Scindapsus pictus",
+   "variety": "Philo",
+   "appName": "Satin Pothos",
+   "appVariety": "Philo",
+   "slug": "satin-pothos-philo",
+   "images": {
+    "pot": "scindapsus-pictus-silver-philo-pot.webp",
+    "grid": "scindapsus-pictus-silver-philo-grid.webp"
+   },
+   "spec": {
+    "product": "L&E",
+    "size_in": "3\u2033-6\u2033",
+    "size_cm": "8-14 cm",
+    "units": "8000",
+    "light": [
+     "Bright Indirect Sunlight",
+     "Low-Medium light",
+     "Shade",
+     "Partial Shade"
+    ],
+    "bullets": [
+     "An easy-going and adaptable plant",
+     "Dark green foliage decorated with splashes of glittery silver"
+    ]
+   }
+  },
+  {
+   "group": "philodendron",
+   "groupTitle": "Heartleaf Philodendron",
+   "latin": "Philodendron hederaceum",
+   "variety": "Brasil",
+   "appName": "Heartleaf Philo",
+   "appVariety": "Brasil",
+   "slug": "philodendron-brasil",
+   "images": {
+    "leaf": "philodendron-hederaceum-brazil-leaf.webp",
+    "pot": "philodendron-hederaceum-brazil-pot.webp",
+    "grid": "philodendron-hederaceum-brazil-grid.webp"
+   },
+   "spec": {
+    "product": "L&E",
+    "size_in": "5\u2033-7\u2033",
+    "size_cm": "12-17 cm",
+    "units": "2200",
+    "light": [
+     "Low-Medium light",
+     "Shade",
+     "Partial Shade"
+    ],
+    "bullets": [
+     "Very popular",
+     "Variegated foliage - green /yellow stripe pattern in the middle of the leaves"
+    ]
+   }
+  },
+  {
+   "group": "philodendron",
+   "groupTitle": "Heartleaf Philodendron",
+   "latin": "Philodendron hederaceum",
+   "variety": "Neon",
+   "appName": "Heartleaf Philo",
+   "appVariety": "Neon",
+   "slug": "philodendron-neon",
+   "images": {
+    "photo": "philodendron-neon-photo.webp"
+   },
+   "spec": null
+  },
+  {
+   "group": "dieffenbachia",
+   "groupTitle": "Dieffenbachia",
+   "latin": "Dieffenbachia seguine",
+   "variety": "Cheetah",
+   "appName": "Money Plant",
+   "appVariety": "Cheetah",
+   "slug": "dieffenbachia-cheetah",
+   "images": {},
+   "spec": null
+  },
+  {
+   "group": "dieffenbachia",
+   "groupTitle": "Dieffenbachia",
+   "latin": "Dieffenbachia seguine",
+   "variety": "Maroba",
+   "appName": "Money Plant",
+   "appVariety": "Maroba",
+   "slug": "dieffenbachia-maroba",
+   "images": {},
+   "spec": null
+  }
+ ]
+}

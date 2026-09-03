@@ -14,7 +14,6 @@
   /* ── Static fallback ─────────────────────────────────────── */
   if (!hasGsap || reduce) {
     document.body.classList.add('no-motion');
-    $('#loader')?.classList.add('is-done');
     $$('.reveal-up').forEach(el => { el.style.opacity = 1; el.style.transform = 'none'; });
     $$('.scrub-words .sw').forEach(w => w.style.opacity = 1);
     $$('[data-count]').forEach(el => el.textContent = el.dataset.count);
@@ -44,27 +43,18 @@
   };
   const splitChars = (el) => { const chars = el.textContent.split(''); el.textContent = ''; chars.forEach(c => { const s = document.createElement('span'); s.className = 'ch'; s.textContent = c; el.appendChild(s); }); return $$('.ch', el); };
 
-  /* ── Preloader → hero intro ──────────────────────────────── */
-  const loader = $('#loader');
+  /* ── Hero intro (no preloader) ───────────────────────────── */
   const heroTitleLines = $$('.hero__title .split');
   const heroReveals = $$('.hero .reveal-up');
   gsap.set(heroTitleLines, { yPercent: 110 });
   gsap.set('.hero__frame', { autoAlpha: 0, y: 40, scale: 0.96 });
   gsap.set('.hero__card', { autoAlpha: 0, y: 30 });
-  if (lenis) lenis.stop();
   gsap.timeline({ defaults: { ease: 'power4.out' } })
-    .set('.loader__brand .wi', { yPercent: 110 })
-    .to('.loader__brand .wi', { yPercent: 0, duration: 1, stagger: 0.08 }, 0.1)
-    .to('.loader__line i', { scaleX: 1, duration: 0.9, ease: 'power2.inOut' }, 0.35)
-    .from('.loader__meta', { autoAlpha: 0, y: 8, duration: 0.6 }, 0.6)
-    .to('.loader__word', { autoAlpha: 0, y: -20, duration: 0.5, ease: 'power2.in' }, 1.3)
-    .to('.loader__panel', { autoAlpha: 0, duration: 0.9, ease: 'power2.inOut' }, 1.5)
-    .add(() => { loader.classList.add('is-done'); if (lenis) lenis.start(); }, 2.3)
-    .to(heroTitleLines, { yPercent: 0, duration: 1.4, stagger: 0.1 }, 1.6)
-    .to('.hero__frame', { autoAlpha: 1, y: 0, scale: 1, duration: 1.6 }, 1.7)
-    .to(heroReveals, { autoAlpha: 1, y: 0, duration: 1.1, stagger: 0.08 }, 1.8)
-    .to('.hero__card', { autoAlpha: 1, y: 0, duration: 1.2, stagger: 0.15 }, 2.1)
-    .from('.nav', { y: -16, autoAlpha: 0, duration: 1 }, 2.0);
+    .to(heroTitleLines, { yPercent: 0, duration: 1.4, stagger: 0.1 }, 0.1)
+    .to('.hero__frame', { autoAlpha: 1, y: 0, scale: 1, duration: 1.6 }, 0.2)
+    .to(heroReveals, { autoAlpha: 1, y: 0, duration: 1.1, stagger: 0.08 }, 0.3)
+    .to('.hero__card', { autoAlpha: 1, y: 0, duration: 1.2, stagger: 0.15 }, 0.6)
+    .from('.nav', { y: -16, autoAlpha: 0, duration: 1 }, 0.2);
 
   /* ── Hero parallax (scroll + pointer) ────────────────────── */
   const hero = $('#hero'), stage = $('#heroStage');

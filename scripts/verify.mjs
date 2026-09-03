@@ -43,7 +43,7 @@ for (const vp of viewports) {
   page.on('console', m => { if (m.type() === 'error') errors.push(m.text()); });
   page.on('pageerror', e => errors.push(String(e)));
   await page.goto(url, { waitUntil: 'networkidle' });
-  await page.waitForTimeout(3400); // preloader + intro
+  await page.waitForTimeout(2200); // hero intro
 
   // scroll through the whole page in steps so every trigger fires
   const total = await page.evaluate(() => document.documentElement.scrollHeight);
