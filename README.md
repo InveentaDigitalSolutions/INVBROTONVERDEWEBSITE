@@ -7,8 +7,8 @@ San Pedro Sula weekly.
 
 Two versions to choose from, one source:
 
-- `index.html` — **light** ("surgically clean" paper palette)
-- `dark.html` — **dark** twin, generated from `index.html` by `node scripts/build.mjs` (never edit by hand)
+- `index.html` — **the site**: dark shade palette with light catalogue and grade sections (the chosen direction)
+- `light.html` — all-light twin, generated from `index.html` by `node scripts/build.mjs` for comparison only (never edit by hand, not linked)
 
 Both share `css/styles.css` (theme tokens on `html[data-theme]`) and `js/main.js`.
 

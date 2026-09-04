@@ -2,7 +2,7 @@
    1. Renders the catalogue sections into index.html from data/products.json — the nursery's own
       32 lines (read from the FarmTrack app), enriched with photos/specs where the 2026–27
       foliage catalogue (data/catalog.json) carries the same line. Idempotent, between @catalog markers.
-   2. Writes dark.html, the dark twin of index.html (never edit it by hand).
+   2. Writes light.html, the light twin of index.html (never edit it by hand; not linked from the site).
    3. Writes dist/brotonverde-light.html and dist/brotonverde-dark.html — single files with CSS, JS and lite images inlined. */
 import { readFile, writeFile, mkdir, access } from 'node:fs/promises';
 import { resolve, dirname, join } from 'node:path';
@@ -88,11 +88,12 @@ light = inject(light, 'formchips', '\n' + formChips);
 light = light.replace(/<div class="marquee__track" id="marqueeTrack">[\s\S]*?<\/div>/, `<div class="marquee__track" id="marqueeTrack">${marquee}${marquee}</div>`);
 await writeFile(join(root, 'index.html'), light);
 
-const dark = light
-  .replace('<html lang="en" data-theme="light">', '<html lang="en" data-theme="dark">')
-  .replace('<meta name="theme-color" content="#F6F4EE" />', '<meta name="theme-color" content="#0A1410" />')
-  .replace('<a class="theme-link mono" id="themeLink" href="dark.html">DARK VERSION</a>', '<a class="theme-link mono" id="themeLink" href="index.html">LIGHT VERSION</a>');
-await writeFile(join(root, 'dark.html'), dark);
+/* index.html is the dark site; light.html is an unlinked twin kept for comparison */
+const dark = light;
+const lightTwin = dark
+  .replace('<html lang="en" data-theme="dark">', '<html lang="en" data-theme="light">')
+  .replace('<meta name="theme-color" content="#0A1410" />', '<meta name="theme-color" content="#F6F4EE" />');
+await writeFile(join(root, 'light.html'), lightTwin);
 
 /* single files */
 const css = await readFile(join(root, 'css/styles.css'), 'utf8');
@@ -107,7 +108,7 @@ const data = async (path) => {
   return cache.get(path);
 };
 await mkdir(join(root, 'dist'), { recursive: true });
-for (const [theme, html] of [['light', light], ['dark', dark]]) {
+for (const [theme, html] of [['light', lightTwin], ['dark', dark]]) {
   const body = html.slice(html.indexOf('<body>') + 6, html.lastIndexOf('</body>'));
   const fonts = html.match(/<link href="https:\/\/fonts\.googleapis\.com[^>]*>/)[0];
   let out = body.replace('<script src="js/main.js"></script>', `<script>\n${js}\n</script>`).replace(/<a class="theme-link[^<]*<\/a>/, '');
@@ -118,4 +119,4 @@ for (const [theme, html] of [['light', light], ['dark', dark]]) {
   await writeFile(join(root, 'dist', `brotonverde-${theme}.html`), single);
   console.log(`dist/brotonverde-${theme}.html`, (single.length / 1024 / 1024).toFixed(2), 'MB');
 }
-console.log(`index.html rendered (${lines.length} lines, ${groups.length} groups), dark.html regenerated`);
+console.log(`index.html rendered (${lines.length} lines, ${groups.length} groups), light.html regenerated`);
