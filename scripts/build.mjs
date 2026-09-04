@@ -5,6 +5,8 @@
    2. Writes light.html, the light twin of index.html (never edit it by hand; not linked from the site).
    3. Writes dist/brotonverde-light.html and dist/brotonverde-dark.html — single files with CSS, JS and lite images inlined. */
 import { readFile, writeFile, mkdir, access } from 'node:fs/promises';
+import { readFileSync } from 'node:fs';
+const readFileSyncSafe = (f) => readFileSync(join(root, f));
 import { resolve, dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -80,6 +82,11 @@ const marquee = lines.map(v => `<span>${esc(v.variety)}</span><i>✦</i>`).join(
 
 const inject = (h, key, body) => h.replace(new RegExp(`(<!-- @catalog:${key} -->)[\\s\\S]*?(<!-- @/catalog:${key} -->)`), `$1${body}\n$2`);
 let light = await readFile(join(root, 'index.html'), 'utf8');
+// cache-busting: stamp css/js links with a content hash so browsers never pair new HTML with a stale stylesheet
+const { createHash } = await import('node:crypto');
+const stamp = (file) => createHash('md5').update(readFileSyncSafe(file)).digest('hex').slice(0, 8);
+light = light.replace(/href="css\/styles\.css(\?v=[a-f0-9]+)?"/, `href="css/styles.css?v=${stamp('css/styles.css')}"`)
+             .replace(/src="js\/main\.js(\?v=[a-f0-9]+)?"/, `src="js/main.js?v=${stamp('js/main.js')}"`);
 light = inject(light, 'pothos', pothosHtml);
 light = inject(light, 'genera', groupsHtml);
 light = inject(light, 'sizes', sizesHtml);
@@ -111,7 +118,7 @@ await mkdir(join(root, 'dist'), { recursive: true });
 for (const [theme, html] of [['light', lightTwin], ['dark', dark]]) {
   const body = html.slice(html.indexOf('<body>') + 6, html.lastIndexOf('</body>'));
   const fonts = html.match(/<link href="https:\/\/fonts\.googleapis\.com[^>]*>/)[0];
-  let out = body.replace('<script src="js/main.js"></script>', `<script>\n${js}\n</script>`).replace(/<a class="theme-link[^<]*<\/a>/, '');
+  let out = body.replace(/<script src="js\/main\.js[^"]*"><\/script>/, `<script>\n${js}\n</script>`).replace(/<a class="theme-link[^<]*<\/a>/, '');
   const refs = [...new Set([...out.matchAll(/assets\/img\/[\w\/-]+\.(?:webp|jpg)/g)].map(m => m[0]))];
   for (const ref of refs) out = out.replaceAll(ref, await data(ref));
   const themedCss = css.replaceAll('html[data-theme="dark"]', 'html[data-theme="dark"],body[data-theme="dark"]').replaceAll('html[data-theme="light"]', 'html[data-theme="light"],body[data-theme="light"]');
