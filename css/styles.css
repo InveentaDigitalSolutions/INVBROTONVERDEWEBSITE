@@ -252,6 +252,7 @@ html[data-theme="dark"] .hero::before{background:linear-gradient(to bottom,var(-
 .logistics{padding:var(--pad) 0;background:var(--bg-3)}
 .logistics__grid,.sheet__wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(30px,5vw,80px);align-items:center}
 .logistics__copy,.sheet__copy{display:grid;gap:18px;justify-items:start}
+.sheet__copy .bullets li{grid-template-columns:100px 1fr}
 .sheet__copy > p{color:var(--ink-2);max-width:48ch}
 .bullets{display:grid;gap:10px;border-top:1px solid var(--line-2);padding-top:16px;width:100%}
 .bullets li{display:grid;grid-template-columns:130px 1fr;gap:12px;font-size:15px;color:var(--ink-2)}
